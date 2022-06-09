@@ -1,19 +1,19 @@
-# # Example 1
-# # -ShowTime adds timestamp to output
-# Write-Color "[i] ", "Parameter in configuration of ", "EmailParameters.EmailFrom", " exists." -Color White, White, Green, White -ShowTime
-# Write-Color "[i] ", "Parameter in configuration of ", "EmailParameters.EmailTo", " exists." -Color White, White, Green, White -ShowTime
+# Example 1
+# -ShowTime adds timestamp to output
+Write-Color "[i] ", "Parameter in configuration of ", "EmailParameters.EmailFrom", " exists." -Color White, White, Green, White -ShowTime
+Write-Color "[i] ", "Parameter in configuration of ", "EmailParameters.EmailTo", " exists." -Color White, White, Green, White -ShowTime
 
 
 
-# # Example 2
-# Write-Color "[i] ", "I will send email soon...", "Get ready.." -Color White
-# Write-Color "[i] ", "Sending email...." -Color White, White -NoNewLine
-# <#
-#     Do Something....
-# #>
-# if ($true) {
-#     Write-Color -Text "OK" -Color Green
-# }
+# Example 2
+Write-Color "[i] ", "I will send email soon...", "Get ready.." -Color White
+Write-Color "[i] ", "Sending email...." -Color White, White -NoNewLine
+<#
+    Do Something....
+#>
+if ($true) {
+    Write-Color -Text "OK" -Color Green
+}
 
 
 # Example 3
