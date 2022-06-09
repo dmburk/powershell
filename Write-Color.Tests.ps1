@@ -41,8 +41,8 @@ Write-Color -Text "This can get ", "handy if ", "want to display things, and log
 
 
 
-# # Example 4 with backgrund colors and usage of aliases
-# Write-Color -T "My text", " is ", "all colorful" -C Yellow, Red, Green -B Green, Green, Yellow
-# Write-Color -T "My text", " is ", "all colorful" -C Yellow, Red, Green -B Red, Green, Green
-# # Example 5 with aliases
-# wc -t "my text" -C Red
+# Example 4 with backgrund colors and usage of aliases
+Write-Color -T "My text", " is ", "all colorful" -C Yellow, Red, Green -B Green, Green, Yellow
+Write-Color -T "My text", " is ", "all colorful" -C Yellow, Red, Green -B Red, Green, Green
+# Example 5 with aliases
+wc -t "my text" -C Red
