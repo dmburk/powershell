@@ -24,3 +24,37 @@ $myObject.'Name'
 # or
 $property = 'Name'
 $myObject.$property
+
+
+# convert PSCUstomObject into a hashtable
+$hashtable = @{}
+foreach( $property in $myobject.psobject.properties.name )
+{
+    $hashtable[$property] = $myObject.$property
+}
+
+# testing for properties
+if( $null -ne $myObject.ID )
+# if value could be $null check if it exists instead
+if( $myobject.psobject.properties.match('ID').Count )
+
+
+# Adding object methods
+$ScriptBlock = {
+    $hashtable = @{}
+    foreach( $property in $this.psobject.properties.name )
+    {
+        $hashtable[$property] = $this.$property
+    }
+    return $hashtable
+}
+
+$memberParam = @{
+    MemberType = "ScriptMethod"
+    InputObject = $myobject
+    Name = "ToHashtable"
+    Value = $scriptBlock
+}
+Add-Member @memberParam
+
+$myObject.ToHashtable()
